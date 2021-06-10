@@ -1,0 +1,292 @@
+/* Text alignments */
+@import url("https://fonts.googleapis.com/css2?family=Blinker:wght@300;400;600;700&display=swap");
+.text-center {
+  text-align: center;
+}
+
+/* Text colors */
+.text-light-blue {
+  color: #bbe1fa;
+}
+
+.text-green {
+  color: #4de054;
+  transition: filter 0.15s;
+}
+
+a.text-orange:hover {
+  filter: brightness(0.93);
+}
+
+/* Text weights */
+.font-weight-light {
+  font-weight: 300;
+}
+
+/* Text transforms */
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+/* Margins */
+.mb-1 {
+  margin-bottom: 0.6rem;
+}
+
+/* Display Texts */
+.display-1,
+.display-2,
+.display-3,
+.display-4,
+.display-5 {
+  font-weight: 400;
+}
+
+.display-2 {
+  font-size: 2.4rem;
+}
+
+.display-3 {
+  font-size: 2rem;
+}
+
+.display-4 {
+  font-size: 1.8rem;
+}
+
+.display-5 {
+  font-size: 1.3rem;
+}
+
+/* Cursor */
+.cursor-pointer {
+  cursor: pointer;
+}
+
+header.header {
+  display: flex;
+  align-items: center;
+  padding: 1rem 2rem;
+  justify-content: space-between;
+  background-color: #0f4c75;
+}
+header.header h2.logo {
+  font-weight: 600;
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+  cursor: pointer;
+  color: #fff;
+}
+header.header nav {
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+}
+header.header nav a {
+  font-weight: 600;
+  background: white;
+  color: #3282b8;
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: box-shadow 0.2s;
+  outline: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  margin-right: 1rem;
+}
+header.header nav a i {
+  margin-left: 4px;
+}
+header.header nav a:last-of-type {
+  margin-right: 0;
+}
+header.header nav a:hover {
+  box-shadow: 0 0 16px rgba(255, 255, 255, 0.3);
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-out {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-30px);
+    opacity: 0;
+  }
+}
+.slide-enter-active {
+  animation: slide-in 0.3s ease;
+}
+
+.slide-leave-active {
+  animation: slide-out 0.3s ease;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.home h1 {
+  color: #fff;
+}
+.home .text-green:hover {
+  color: #21bf29;
+  transition: 0.2s ease;
+}
+
+.board-view h1 {
+  color: #fff;
+}
+.board-view main {
+  margin-top: 1rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.board-view main .board {
+  background-color: #DDD;
+  color: #1b262c;
+  border-radius: 8px;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+  min-width: 250px;
+  padding: 1rem 0.5rem;
+}
+.board-view main .board .board-title {
+  align-self: flex-start;
+  margin-bottom: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.board-view main .board .board-title h3 {
+  font-weight: 500;
+}
+.board-view main .board .board-title button {
+  border: none;
+  outline: none;
+  padding: 10px 10px;
+  transition: background 0.1s, display 0.1s;
+  background-color: #AAA;
+  color: #E7E7E9;
+  font-size: 0.8rem;
+  border-radius: 4px;
+}
+.board-view main .board .board-title button i {
+  transition: transform 0.5s;
+}
+.board-view main .board .board-title button:hover {
+  cursor: pointer;
+}
+.board-view main .board .board-title button:hover i {
+  transform: rotate(360deg);
+}
+.board-view main .board .drag-container {
+  width: 100%;
+}
+.board-view main .board .task-ghost {
+  transition: transform 0.18s ease;
+  transform: rotateZ(5deg);
+}
+.board-view main .board .task-ghost-drop {
+  transition: transform 0.18s ease-in-out;
+  transform: rotateZ(0deg);
+}
+.board-view main .board .task {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #F4F5F7;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+  padding: 0.7rem;
+  margin-bottom: 0.6rem;
+  transition: background 0.1s;
+}
+.board-view main .board .task:hover {
+  background-color: #E7E7E9;
+  cursor: pointer;
+}
+.board-view main .board .task:hover button {
+  display: block;
+}
+.board-view main .board .task:hover button:hover {
+  background-color: #DDD;
+  color: #AAA;
+  cursor: pointer;
+}
+.board-view main .board .task .column-drag-handle {
+  margin-right: 6px;
+  cursor: move;
+}
+.board-view main .board .task h3 {
+  font-weight: 300;
+}
+.board-view main .board .task button {
+  display: none;
+  border: none;
+  outline: none;
+  padding: 3px 6px;
+  transition: background 0.1s, display 0.1s;
+  background-color: #E7E7E9;
+  color: #AAA;
+  font-size: 0.8rem;
+  border-radius: 4px;
+}
+.board-view main .board .drop-placeholder {
+  background-color: rgba(170, 170, 170, 0.4);
+  padding: 0.7rem;
+  border-radius: 6px;
+  margin-bottom: 0.6rem;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.25);
+}
+.board-view main .board .empty-board-text {
+  width: 100%;
+  color: #F4F5F7;
+  font-size: 1.15rem;
+  letter-spacing: 1px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Blinker", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  font-size: 16px;
+  color: #000;
+}
+
+#app {
+  min-height: 100vh;
+  background-color: #3282b8;
+}
+
+.view {
+  padding: 1rem 2rem;
+  height: auto;
+}
+
+.login {
+  background-color: white;
+  margin-top: 50px;
+  border-radius: 8px;
+}
