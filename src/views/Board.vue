@@ -153,4 +153,8 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.drag-container {
+  z-index: 0;
+}
+</style>

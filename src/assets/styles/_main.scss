@@ -6,6 +6,7 @@
 
 @import './pages/home';
 @import './pages/board';
+@import './pages/login';
 
 @import url('https://fonts.googleapis.com/css2?family=Blinker:wght@300;400;600;700&display=swap');
 
@@ -25,7 +26,7 @@ body {
 
 #app {
     min-height: 100vh;
-    background-color: $light-blue1;
+    background-color: $bg-color;
 }
 
 .view {

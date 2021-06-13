@@ -10,3 +10,6 @@
   color: #21bf29;
   transition: 0.2s ease;
 }
+.home a {
+  text-decoration: none;
+}

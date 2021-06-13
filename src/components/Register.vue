@@ -1,6 +1,6 @@
 <template>
     <section class="container mx-auto w-25 p-3">
-        <form @submit.prevent="handleSubmit" class="register">
+        <form @submit.prevent="handleSubmit">
             <h3 class="form-group mx-auto h3 text-center">
                 Регистрация
             </h3>
@@ -35,6 +35,7 @@
 
 <script>
 import axios from 'axios'
+
 export default {
     name: 'Register',
     data() {
@@ -53,8 +54,7 @@ export default {
                 password: this.password,
                 password_confirm: this.password_confirm
             });
-            
-            this.$router.push('/login');
+            this.$router.push('/');
         }
     }
 }

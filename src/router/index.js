@@ -9,7 +9,6 @@ Vue.use(VueRouter);
 
 const routes = [{
   path: '/register',
-  name: 'Sign up',
   component: Register
 },
   {
@@ -34,5 +33,7 @@ const router = new VueRouter({
   base: process.env.BASE_URL,
   routes
 });
+
+
 
 export default router;

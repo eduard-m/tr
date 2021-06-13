@@ -1,17 +1,28 @@
 .board-view {
 
     h1 {
-        color: #fff;
+        color: $bg-color-head;
+        font-family: $fontnun;
+        text-shadow: 1px 1px black;
+        font-weight: 700;
+        font-size: 50px;
+        letter-spacing: 5px;
     }
 
     main {
         margin-top: 1rem;
         display: flex;
+        flex-wrap: wrap;
         align-items: flex-start;
-        justify-content: space-between;
+        justify-content: center;
+
+        @media (min-width:610px) {
+            justify-content: space-between;
+        }
 
         .board {
-            background-color: $dark-gray;
+            margin-bottom: 5px;
+            background-color: #e4dcdcbb;
             color: $dark-blue1;
             border-radius: 8px;
             box-shadow: 0 0 7px rgba($color: #000000, $alpha: 0.25);
@@ -19,7 +30,7 @@
             flex-direction: column;
             align-items: center;
             width: 30%;
-            min-width: 250px;
+            min-width: 200px;
             padding: 1rem 0.5rem;
 
             .board-title {

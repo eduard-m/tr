@@ -1,7 +1,7 @@
 <template>
-    <section class="container mx-auto w-25 p-3">
+    <section class="mx-auto p-3 sec-log">
         <form @submit.prevent="handleSubmit" class="login">
-            <div class="form-group mx-auto h3 text-center">
+            <div class="form-group mx-auto h3 text-center head-login">
                 Trollo
             </div>
 
@@ -11,7 +11,7 @@
             </div>
 
             <div class="form-group text-center">
-                <button type="submit" class="btn btn-primary">Login</button>
+                <router-link type="submit" class="btn btn-primary" to="/board">Login</router-link>
             </div>
 
             <div class="form-group text-center mx-auto h3">

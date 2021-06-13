@@ -27,7 +27,6 @@ _vue["default"].use(_vueRouter["default"]);
 
 var routes = [{
   path: '/register',
-  name: 'Sign up',
   component: _Register["default"]
 }, {
   path: '/',
